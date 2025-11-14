@@ -4,20 +4,20 @@
 int main() {
     HashMap<std::string, int> map;
 
-    map.insert("cat", 1);
-    map.insert("dog", 2);
+    map.insert("bob", 1);
+    map.insert("rob", 2);
 
-    std::cout << "cat: " << map.at("cat") << "\n";
+    std::cout << "bob: " << map.at("bob") << "\n";
 
-    map.insert("cat", 99);
-    std::cout << "cat after update: " << map.at("cat") << "\n";
+    map.insert("bob", 99);
+    std::cout << "bob after update: " << map.at("bob") << "\n";
 
-    if (map.contains("dog"))
-        std::cout << "dog found!\n";
+    if (map.contains("rob"))
+        std::cout << "rob found!\n";
 
-    map.remove("dog");
-    if (!map.contains("dog"))
-        std::cout << "dog removed!\n";
+    map.remove("rob");
+    if (!map.contains("rob"))
+        std::cout << "rob removed!\n";
 
     std::cout << "size: " << map.size() << "\n";
     return 0;
