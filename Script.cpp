@@ -14,7 +14,7 @@ private:
     size_t num_elements;
     std::hash<Key> hash_fn;
 
-    void rehash() {
+    void re_hash() {
         size_t new_capacity = buckets.size() * 2;
         std::vector<std::list<std::pair<Key, Value>>> new_buckets(new_capacity);
 
@@ -33,7 +33,7 @@ public:
 
     void insert(const Key& key, const Value& value) {
         if ((float)num_elements / buckets.size() > LOAD_FACTOR) {
-            rehash();
+            re_hash();
         }
 
         size_t index = hash_fn(key) % buckets.size();
